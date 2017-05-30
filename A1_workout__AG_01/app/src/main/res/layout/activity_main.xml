@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aleksandr.a1_workout_ag.MainActivity">
+
+    <!-- ======================================== кнопка Отжимания ( начало )  -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/pushups_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/pushups_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_002_ic_pushups"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_002_ic_pushups"
+                android:text="@string/pushups"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/pushups_last_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/repeats_count"
+                android:textAlignment="viewEnd"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- ======================================== кнопка Отжимания ( конец )  -->
+
+
+    <!-- ======================================== кнопка Подтягивания ( начало )  -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/pullups_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pushups_card_view"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onPullUpsClick"
+        app:cardElevation="4dp"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/pullups_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_001_ic_pull_up"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_001_ic_pull_up"
+                android:text="@string/pullups"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- ======================================== кнопка Подтягивания ( конец )  -->
+
+
+    <!-- ======================================== кнопка пресс ( начало )  -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/press_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pullups_card_view"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onPressUpsClick"
+        app:cardElevation="4dp"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/press_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_003_ic_press"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_003_ic_press"
+                android:text="@string/press"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- ======================================== кнопка пресс ( конец )  -->
+
+    <!-- ======================================== нижний пустой элемент ( начало )  -->
+    <!--
+    <android.support.v7.widget.CardView
+        android:id="@+id/workout_description_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/press_card_view">
+
+        <TextView
+            android:id="@+id/workout_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+    </android.support.v7.widget.CardView>  -->
+
+    <!-- ======================================== нижний пустой элемент ( конец )  -->
+
+
+    <!-- ======================================== кнопка растяжка ( начало )  -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stetching_card_view"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="4dp"
+        android:onClick="onStretchingUpsClick"
+        android:layout_below="@+id/press_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/stretching_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_004_ic_stretching"
+                android:drawableStart="@drawable/ic_004_ic_stretching"
+                android:drawablePadding="16dp"
+                android:text="@string/stretching"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+    <!-- ======================================== кнопка растяжка ( конец )  -->
+
+    <!-- ======================================== нижний пустой элемент ( начало )  -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/workout_description_card_view"
+            android:layout_below="@+id/stetching_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:id="@+id/workout_description_text_view"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.CardView>
+
+    <!-- ======================================== нижний пустой элемент ( конец )  -->
+
+
+</RelativeLayout>
