@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/workout_title_text_view"
+            android:layout_margin="8dp"
+            tools:text="@string/pushups"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <!--Счетчик повторов-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/plus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_exposure_plus_1_black_24dp"/>
+
+            <TextView
+                android:id="@+id/repeat_count_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                tools:text="20"/>
+
+            <ImageButton
+                android:id="@+id/minus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_exposure_neg_1_black_24dp"/>
+        </LinearLayout>
+
+        <!--Таймер-->
+        <include layout="@layout/timer_layout"/>
+
+        <TextView
+            android:id="@+id/workout_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="@string/pushups_description"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/completeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/complete"/>
+
+    </LinearLayout>
+</ScrollView>
